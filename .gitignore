@@ -11,7 +11,12 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/.ssh
+id_rsa.pub
+id_rsa
+id_dsa.pub
+id_dsa
+*.pem
+*.key
 /.idea
 /.vscode
 
