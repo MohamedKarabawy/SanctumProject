@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "b9dc6402-d876-4ebf-b065-9ac1483f48b7",
+		"name": "SanctumProject API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/SanctumProject/public/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SanctumProject",
+						"public",
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|WDUsqDjKIf8gPkgYm57NhvwA84kajIB1044ixTPI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Iphone 13",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "iphone-13",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is the new version of iphone",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "988",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/SanctumProject/public/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SanctumProject",
+						"public",
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/SanctumProject/public/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SanctumProject",
+						"public",
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/SanctumProject/public/api/products/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SanctumProject",
+						"public",
+						"api",
+						"products",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/SanctumProject/public/api/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SanctumProject",
+						"public",
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for a Product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/SanctumProject/public/api/products/search/BMW",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SanctumProject",
+						"public",
+						"api",
+						"products",
+						"search",
+						"BMW"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Mohamed Karabawy",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mohamedkarbawy@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mido2000",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "mido2000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/SanctumProject/public/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SanctumProject",
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|vovpA8kWSJx4TeCbBrPLiCW6xhh8ISw980RHMUkZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/SanctumProject/public/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SanctumProject",
+						"public",
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "mohamedkarbawy@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mido2000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/SanctumProject/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SanctumProject",
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
