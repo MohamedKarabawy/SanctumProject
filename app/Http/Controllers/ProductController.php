@@ -34,17 +34,54 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
-        return Product::find($id)->update($request->all());
+        $product = Product::find($id);
+       
+        if(!$product)
+        $response = [
+            'message' => 'Product not found.'
+        ];
+         else {
+        $product->update($request->all());
+        $response = [
+            'message' => 'Product has been updated.'
+        ];
+        }
+
+        return response($response, 200);
     }
 
     /* search for a name */
     public function search($name)
     {
-       return Product::where('name','like','%'.$name.'%')->get();
+        $product = Product::where('name','like','%'.$name.'%');
+
+        if(!$product->first())
+        {
+        $response = [
+            'message' => 'Product not found.'
+        ];
+
+        return response($response, 200);
+        }
+
+        return $product->get();
     }
 
     public function destroy($id)
     {
-        return Product::destroy($id);
+
+      $product = Product::destroy($id);
+
+        if(!$product)
+        $response = [
+            'message' => 'Product not found.'
+        ];
+         else 
+        $response = [
+            'message' => 'Product has been deleted.'
+        ];
+
+
+        return response($response, 200);
     }
 }
